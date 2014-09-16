@@ -56,7 +56,7 @@ if __name__ == '__main__':
 
             promedio = (sum(pixel))/25
  
-            #asignamos al pixel actual el valor que queda enmedio de todos ya ordenados
+            #asignamos al pixel actual el valor resultante del promedio
             resultado[x,y,2] = promedio 
 
     #Transformamos de vuelta de HSV a RGB para mostrar el resultado del filtro
