@@ -54,10 +54,10 @@ if __name__ == '__main__':
             pixel[23] = hsv[x+1,y-2,2]
             pixel[24] = hsv[x+2,y-2,2]
 
-            promedio = (sum(pixel))/25
- 
+            #se ordena los valores
+            pixel.sort()  
             #asignamos al pixel actual el valor que queda enmedio de todos ya ordenados
-            resultado[x,y,2] = promedio 
+            resultado[x,y,2]=pixel[12] 
 
     #Transformamos de vuelta de HSV a RGB para mostrar el resultado del filtro
     final = cv2.cvtColor(resultado, cv2.COLOR_HSV2BGR)
