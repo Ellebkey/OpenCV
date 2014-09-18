@@ -48,7 +48,7 @@ if __name__ == '__main__':
     update()
     while (1):
         ch = 0xFF & cv2.waitKey()
-        if ch == ord(' '):
+        if ch == ord('v'):
             update()
         if ch == 27:
             break
