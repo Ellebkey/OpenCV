@@ -9,12 +9,11 @@ if __name__ == '__main__':
     #en lugar de copiar resultado de hsv las creo por separado sino hay un desface en los pixeles
     hsv = cv2.cvtColor(copia, cv2.COLOR_BGR2HSV)
     resultado = cv2.cvtColor(copia, cv2.COLOR_BGR2HSV)
-
+    
     a = imagen.shape[0]
     b = imagen.shape[1]
 
     p=[hsv[0,0,0]]*9
-
 
     #Filtro
     for y in range(1,b-1):
