@@ -1,9 +1,6 @@
 import numpy as np
 import cv2
-import time
-import requests
 import threading
-import urllib
 from threading import Thread, Event, ThreadError
 
 hue = 10
@@ -45,20 +42,6 @@ class Cam():
         thresh2 = thresh.copy()
 
         contours,hierarchy = cv2.findContours(thresh,cv2.RETR_LIST,cv2.CHAIN_APPROX_SIMPLE)
-
-        max_area = 0
-        best_cnt = 1
-        area = 0
-
-        for cnt in contours:
-          area = cv2.contourArea(cnt)
-          if area > max_area:
-            max_area = area
-            best_cnt = cnt
-
-        M = cv2.moments(best_cnt)
-        cx,cy = int(M['m10']/M['m00']), int(M['m01']/M['m00'])
-
 
         cv2.imshow('Camera',frame)
         cv2.imshow('Objeto',thresh2)
