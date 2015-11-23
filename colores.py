@@ -41,8 +41,6 @@ class Cam():
         thresh = cv2.medianBlur(thresh,7)
         thresh2 = thresh.copy()
 
-        contours,hierarchy = cv2.findContours(thresh,cv2.RETR_LIST,cv2.CHAIN_APPROX_SIMPLE)
-
         cv2.imshow('Camera',frame)
         cv2.imshow('Objeto',thresh2)
 
