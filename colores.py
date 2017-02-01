@@ -9,7 +9,6 @@ val = 10
 hue2 = 180
 sat2 = 255	
 val2 = 255
-variable = 0
 
 class Cam():
   def nothing():
